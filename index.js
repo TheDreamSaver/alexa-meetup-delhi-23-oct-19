@@ -19,7 +19,7 @@ const GamePlayIntentHandler = {
     },
     handle(handlerInput) {
         
-        const userAction = handlerInput.requestEnvelope.request.intent.slots.choice.value;
+        const userAction = Alexa.getSlotValue(handlerInput.requestEnvelope, 'choice');
         
         let speakOutput = '';
         let repromptOutput =' What is your next move?';
